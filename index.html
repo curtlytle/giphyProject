@@ -2,19 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Giphy Proj</title>
+    <title>Disney GIFs</title>
+    <link rel="stylesheet" href="assets/css/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<div class="container">
+    <div class="row toprow">
+        <div class="col-md-9">
+            <div id="disneyButtons"></div>
+        </div>
 
-<div id="somethingButtons"></div>
+        <div class="col-md-3">
+        <form id="disneyForm">
+            <label for="disney-input">Input a Disney Character</label>
+            <input type="text" id="disney-input">
+            <input type="submit" id="addDisney" value="Submit">
+        </form>
+        </div>
+    </div>
 
-<form id="somethingForm">
-    <label for="something-input">Input Something</label>
-    <input type="text" id="something-input">
-    <input type="submit" id="addSomething" value="Submit">
-</form>
-
-<div id="something"></div>
+    <div id="disneyGifs"></div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="assets/javascript/app.js"></script>
