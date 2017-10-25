@@ -1,8 +1,9 @@
 var disneys = ["Goofy", "Mickey", "Donald", "Daisy", "Minnie", "Mary Poppins", "Cinderella", "Gus Gus"];
 var storageKey = "myDisneyArray";
+var storageType = localStorage;
 
 function loadButtons() {
-    var dtemp = JSON.parse(localStorage.getItem(storageKey));
+    var dtemp = JSON.parse(storageType.getItem(storageKey));
     if (dtemp != null && dtemp.length > 0) {
         disneys = dtemp;
     }
@@ -70,7 +71,7 @@ $("#addDisney").on("click", function () {
 
     if (!disneys.includes(input)) {
         disneys.push(input);
-        localStorage.setItem(storageKey, JSON.stringify(disneys));
+        storageType.setItem(storageKey, JSON.stringify(disneys));
         addButton(input);
     }
     document.getElementById("disney-input").value = "";
